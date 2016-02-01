@@ -1,0 +1,31 @@
+class Death : ZilchComponent
+{
+    var Timer : Real = 0;
+    var TimerActive : Boolean = false;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.TimerActive == true)
+        {
+            this.Timer += event.Dt;
+        }
+        if(this.Timer >= 2)
+        {
+            this.Space.LoadLevel(Level.Find("RIP"));
+        }
+    }
+    
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        if(event.OtherObject.Name == "Player")
+        {
+            this.TimerActive = true;
+        }
+        
+    }
+}

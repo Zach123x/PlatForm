@@ -1,0 +1,20 @@
+ImageContent = 
+{
+	SpriteSourceBuilder = 
+	{
+		string Name = "Tile2000",
+		uint64 ResourceId = 56bda8eeb14884eb,
+		uint64 AtlasId = 5274cf95e4a661fd,
+		uint FrameSizeX = 260,
+		uint FrameSizeY = 260,
+		uint FrameCount = 1,
+		float FrameDelay = 0.0833333358,
+		float OriginX = 130,
+		float OriginY = 130,
+		float PixelsPerUnit = 260,
+		bool Smoothing = false,
+		bool Looping = true,
+		Vec4 Slices = [0, 0, 0, 0],
+		SpriteFill Fill = Stretch,
+	},
+},

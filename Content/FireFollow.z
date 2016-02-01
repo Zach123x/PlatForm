@@ -1,0 +1,22 @@
+class FireFollow : ZilchComponent
+{
+    var Tracker : Cog = null;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        this.Tracker = this.Space.FindObjectByName("Player");
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+      var newPosition = this.Tracker.Transform.LocalTranslation;
+      if(this.Space.FindObjectByName("Player").Sprite.FlipX == false)
+      {
+        this.Owner.Transform.LocalTranslation = Real3(newPosition.X - 0.5, newPosition.Y, newPosition.Z -1);
+      }
+      if(this.Space.FindObjectByName("Player").Sprite.FlipX == true)
+      {
+        this.Owner.Transform.LocalTranslation = Real3(newPosition.X + 0.5, newPosition.Y, newPosition.Z -1);
+      }
+}
+}

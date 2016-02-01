@@ -1,0 +1,19 @@
+class Attack : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(Zero.Keyboard.KeyIsDown(Keys.Right))
+        {
+            this.Space.FindObjectByName("FireLift").LinearParticleAnimator.Force.X = 10;
+        }
+        else if(Zero.Keyboard.KeyIsDown(Keys.Left))
+        {
+            this.Space.FindObjectByName("FireLift").LinearParticleAnimator.Force.X = -10;
+        }
+    }
+}

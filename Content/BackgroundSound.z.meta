@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "BackgroundSound",
+		uint64 ResourceId = 56b87a6c7023079e,
+	},
+},

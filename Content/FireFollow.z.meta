@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "FireFollow",
+		uint64 ResourceId = 568035221e259a23,
+	},
+},
