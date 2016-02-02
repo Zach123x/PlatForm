@@ -6,7 +6,7 @@ Cog =
 		string ProjectOwner = "",
 		string DefaultLevel = "Level",
 		string ProjectSpace = "Space",
-		string ProjectFolder = "C:\Users\17.zachery.white\Documents\ZeroProjects\Platform",
+		string ProjectFolder = "C:\Users\17.zachery.white\Desktop\GitHub\PlatForm",
 		uint ProjectEngineRevision = 12624,
 		bool AutoTakeProjectScreenshot = true,
 	},

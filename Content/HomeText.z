@@ -1,0 +1,26 @@
+class HomeText : ZilchComponent
+{
+    var Time: Real = 0;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.Time += event.Dt;
+        if(this.Time >= 3)
+        {
+            this.Owner.Sprite.Visible = true;
+            this.Owner.Sprite.SpriteSource = SpriteSource.Find("Spinmaster1");
+            this.Space.FindObjectByName("Flashy Thing").SphericalParticleEmitter.Active = false;
+        }
+        if(this.Time >= 7)
+        {
+            this.Space.FindObjectByName("Flashy Thing 2").SphericalParticleEmitter.Active = true;
+        }
+        if(this.Time >= 10)
+        {
+        }
+    }
+}
