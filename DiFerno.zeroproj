@@ -2,11 +2,11 @@ Cog =
 {
 	Project = 
 	{
-		string ProjectName = "Platform",
+		string ProjectName = "DiFerno",
 		string ProjectOwner = "",
 		string DefaultLevel = "Level",
 		string ProjectSpace = "Space",
-		string ProjectFolder = "C:\Users\17.zachery.white\Desktop\GitHub\PlatForm",
+		string ProjectFolder = "C:\Users\17.Zachery.White\Desktop\PlatForm",
 		uint ProjectEngineRevision = 12624,
 		bool AutoTakeProjectScreenshot = true,
 	},
